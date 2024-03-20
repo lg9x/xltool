@@ -20,6 +20,7 @@ module.exports = async (env, options) => {
       polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
       taskpane: ["./src/taskpane/taskpane.js", "./src/taskpane/taskpane.html"],
       timesheet: ["./src/timesheet/timesheet.html", "./src/timesheet/timesheet.js"],
+      wbs: ["./src/wbs/wbs.html", "./src/wbs/wbs.js"],
       commands: "./src/commands/commands.js",
     },
     output: {
@@ -64,6 +65,11 @@ module.exports = async (env, options) => {
         filename: "timesheet.html",
         template: "./src/timesheet/timesheet.html",
         chunks: ["polyfill", "timesheet"],
+      }),
+      new HtmlWebpackPlugin({
+        filename: "wbs.html",
+        template: "./src/wbs/wbs.html",
+        chunks: ["polyfill", "wbs"],
       }),
       new CopyWebpackPlugin({
         patterns: [

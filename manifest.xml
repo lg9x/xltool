@@ -30,9 +30,8 @@
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
 
             <CustomTab id="MyTab">
-              <Label resid="MyTab.TabLabel" />
-              <Group id="MyCommandsGroup">
-                <Label resid="MyCommandsGroup.Label" />
+
+              <Group id="Group1">
                 <Icon>
                   <bt:Image size="16" resid="Icon.16x16" />
                   <bt:Image size="32" resid="Icon.32x32" />
@@ -99,6 +98,15 @@
                   </Action>
                 </Control>
 
+                <Label resid="Group1.Label" />
+              </Group>
+
+              <Group id="Group2">
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16" />
+                  <bt:Image size="32" resid="Icon.32x32" />
+                  <bt:Image size="80" resid="Icon.80x80" />
+                </Icon>
                 <!-- Ribbon button that opens the task pane -->
                 <Control xsi:type="Button" id="Button-04">
                   <Label resid="Button-04.Label" />
@@ -119,22 +127,49 @@
                   </Action>
                 </Control>
 
-              </Group>
-
-              <!--Define for WBS-->
-              <Group id="Contoso.CustomTab1.group1">
-                <Label resid="CustomTabGroupLabel"/>
-                <Icon>
-                  <bt:Image size="16" resid="blue-icon-16" />
-                  <bt:Image size="32" resid="blue-icon-32" />
-                  <bt:Image size="80" resid="blue-icon-80" />
-                </Icon>
-                <Control xsi:type="Button" id="Contoso.Button1">
-                  <!-- information on the control -->
+                <!-- Ribbon button that opens the task pane -->
+                <Control xsi:type="Button" id="Button-05">
+                  <Label resid="Button-05.Label" />
+                  <Supertip>
+                    <Title resid="Button-05.Label" />
+                    <Description resid="Button-05.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
+                  </Icon>
+                  <!-- Action type must be ShowTaskpane -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Button-05</TaskpaneId>
+                    <!-- resid must point to a Url Resource -->
+                    <SourceLocation resid="Button-05.Url" />
+                  </Action>
                 </Control>
-                <!-- other controls, as needed -->
+
+                <!-- Ribbon button that opens the task pane -->
+                <Control xsi:type="Button" id="Button-06">
+                  <Label resid="Button-06.Label" />
+                  <Supertip>
+                    <Title resid="Button-06.Label" />
+                    <Description resid="Button-06.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
+                  </Icon>
+                  <!-- Action type must be ShowTaskpane -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Button-06</TaskpaneId>
+                    <!-- resid must point to a Url Resource -->
+                    <SourceLocation resid="Button-06.Url" />
+                  </Action>
+                </Control>
+                <Label resid="Group2.Label" />
               </Group>
 
+              <Label resid="MyTab.TabLabel" />
             </CustomTab>
 
           </ExtensionPoint>
@@ -152,22 +187,29 @@
         <!-- This must point to the HTML document with the task pane -->
         <bt:Url id="Button-01.Url" DefaultValue="https://localhost:3000/taskpane.html" />
         <bt:Url id="Button-02.Url" DefaultValue="https://localhost:3000/timesheet.html" />
-        <bt:Url id="Button-03.Url" DefaultValue="https://localhost:3000/tool-b.html" />
+        <bt:Url id="Button-03.Url" DefaultValue="https://localhost:3000/wbs.html" />
         <bt:Url id="Button-04.Url" DefaultValue="https://localhost:3000/tool-c.html" />
+        <bt:Url id="Button-05.Url" DefaultValue="https://localhost:3000/tool-c.html" />
+        <bt:Url id="Button-06.Url" DefaultValue="https://localhost:3000/tool-c.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="MyTab.TabLabel" DefaultValue="Tools" />
-        <bt:String id="MyCommandsGroup.Label" DefaultValue="MyGroup" />
+        <bt:String id="Group1.Label" DefaultValue="Group 1" />
+        <bt:String id="Group2.Label" DefaultValue="Group 2" />
         <bt:String id="Button-01.Label" DefaultValue="PM Tool" />
         <bt:String id="Button-02.Label" DefaultValue="Timesheet" />
-        <bt:String id="Button-03.Label" DefaultValue="Tool-B" />
+        <bt:String id="Button-03.Label" DefaultValue="WBS" />
         <bt:String id="Button-04.Label" DefaultValue="Tool-C" />
+        <bt:String id="Button-05.Label" DefaultValue="Tool-C" />
+        <bt:String id="Button-06.Label" DefaultValue="Tool-C" />
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="Button-01.Tooltip" DefaultValue="Click to show the task pane" />
         <bt:String id="Button-02.Tooltip" DefaultValue="Click to show the task pane" />
         <bt:String id="Button-03.Tooltip" DefaultValue="Click to show the task pane" />
         <bt:String id="Button-04.Tooltip" DefaultValue="Click to show the task pane" />
+        <bt:String id="Button-05.Tooltip" DefaultValue="Click to show the task pane" />
+        <bt:String id="Button-06.Tooltip" DefaultValue="Click to show the task pane" />
       </bt:LongStrings>
     </Resources>
 
