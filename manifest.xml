@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>6f109d4b-9f65-4640-87d9-cbd8de5fa8c3</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Contoso</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Project Management"/>
+  <Description DefaultValue="Project Management"/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <AppDomains>
+    <AppDomain>https://www.contoso.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <!-- resid must point to a Url Resource -->
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+
+            <CustomTab id="MyTab">
+              <Label resid="MyTab.TabLabel" />
+              <Group id="MyCommandsGroup">
+                <Label resid="MyCommandsGroup.Label" />
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16" />
+                  <bt:Image size="32" resid="Icon.32x32" />
+                  <bt:Image size="80" resid="Icon.80x80" />
+                </Icon>
+
+                <!-- Ribbon button that opens the task pane -->
+                <Control xsi:type="Button" id="Button-01">
+                  <Label resid="Button-01.Label" />
+                  <Supertip>
+                    <Title resid="Button-01.Label" />
+                    <Description resid="Button-01.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
+                  </Icon>
+                  <!-- Action type must be ShowTaskpane -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Button-01</TaskpaneId>
+                    <!-- resid must point to a Url Resource -->
+                    <SourceLocation resid="Button-01.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Ribbon button that opens the task pane -->
+                <Control xsi:type="Button" id="Button-02">
+                  <Label resid="Button-02.Label" />
+                  <Supertip>
+                    <Title resid="Button-02.Label" />
+                    <Description resid="Button-02.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
+                  </Icon>
+                  <!-- Action type must be ShowTaskpane -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Button-02</TaskpaneId>
+                    <!-- resid must point to a Url Resource -->
+                    <SourceLocation resid="Button-02.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Ribbon button that opens the task pane -->
+                <Control xsi:type="Button" id="Button-03">
+                  <Label resid="Button-03.Label" />
+                  <Supertip>
+                    <Title resid="Button-03.Label" />
+                    <Description resid="Button-03.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
+                  </Icon>
+                  <!-- Action type must be ShowTaskpane -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Button-03</TaskpaneId>
+                    <!-- resid must point to a Url Resource -->
+                    <SourceLocation resid="Button-03.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Ribbon button that opens the task pane -->
+                <Control xsi:type="Button" id="Button-04">
+                  <Label resid="Button-04.Label" />
+                  <Supertip>
+                    <Title resid="Button-04.Label" />
+                    <Description resid="Button-04.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
+                  </Icon>
+                  <!-- Action type must be ShowTaskpane -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Button-04</TaskpaneId>
+                    <!-- resid must point to a Url Resource -->
+                    <SourceLocation resid="Button-04.Url" />
+                  </Action>
+                </Control>
+
+              </Group>
+
+              <!--Define for WBS-->
+              <Group id="Contoso.CustomTab1.group1">
+                <Label resid="CustomTabGroupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="blue-icon-16" />
+                  <bt:Image size="32" resid="blue-icon-32" />
+                  <bt:Image size="80" resid="blue-icon-80" />
+                </Icon>
+                <Control xsi:type="Button" id="Contoso.Button1">
+                  <!-- information on the control -->
+                </Control>
+                <!-- other controls, as needed -->
+              </Group>
+
+            </CustomTab>
+
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <!-- This must point to the HTML document with the task pane -->
+        <bt:Url id="Button-01.Url" DefaultValue="https://localhost:3000/taskpane.html" />
+        <bt:Url id="Button-02.Url" DefaultValue="https://localhost:3000/timesheet.html" />
+        <bt:Url id="Button-03.Url" DefaultValue="https://localhost:3000/tool-b.html" />
+        <bt:Url id="Button-04.Url" DefaultValue="https://localhost:3000/tool-c.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="MyTab.TabLabel" DefaultValue="Tools" />
+        <bt:String id="MyCommandsGroup.Label" DefaultValue="MyGroup" />
+        <bt:String id="Button-01.Label" DefaultValue="PM Tool" />
+        <bt:String id="Button-02.Label" DefaultValue="Timesheet" />
+        <bt:String id="Button-03.Label" DefaultValue="Tool-B" />
+        <bt:String id="Button-04.Label" DefaultValue="Tool-C" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="Button-01.Tooltip" DefaultValue="Click to show the task pane" />
+        <bt:String id="Button-02.Tooltip" DefaultValue="Click to show the task pane" />
+        <bt:String id="Button-03.Tooltip" DefaultValue="Click to show the task pane" />
+        <bt:String id="Button-04.Tooltip" DefaultValue="Click to show the task pane" />
+      </bt:LongStrings>
+    </Resources>
+
+  </VersionOverrides>
+</OfficeApp>
