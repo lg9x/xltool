@@ -18,6 +18,7 @@ module.exports = async (env, options) => {
     devtool: "source-map",
     entry: {
       polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
+      common: ["./src/common/common.js", "./src/common/common.html"],
       taskpane: ["./src/taskpane/taskpane.js", "./src/taskpane/taskpane.html"],
       timesheet: ["./src/timesheet/timesheet.html", "./src/timesheet/timesheet.js"],
       wbs: ["./src/wbs/wbs.html", "./src/wbs/wbs.js"],
@@ -56,6 +57,11 @@ module.exports = async (env, options) => {
       ],
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        filename: "common.html",
+        template: "./src/common/common.html",
+        chunks: ["polyfill", "common"],
+      }),
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
         template: "./src/taskpane/taskpane.html",

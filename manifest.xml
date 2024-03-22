@@ -185,7 +185,7 @@
       </bt:Images>
       <bt:Urls>
         <!-- This must point to the HTML document with the task pane -->
-        <bt:Url id="Button-01.Url" DefaultValue="https://localhost:3000/taskpane.html" />
+        <bt:Url id="Button-01.Url" DefaultValue="https://localhost:3000/common.html" />
         <bt:Url id="Button-02.Url" DefaultValue="https://localhost:3000/timesheet.html" />
         <bt:Url id="Button-03.Url" DefaultValue="https://localhost:3000/wbs.html" />
         <bt:Url id="Button-04.Url" DefaultValue="https://localhost:3000/tool-c.html" />
@@ -196,7 +196,7 @@
         <bt:String id="MyTab.TabLabel" DefaultValue="Tools" />
         <bt:String id="Group1.Label" DefaultValue="Group 1" />
         <bt:String id="Group2.Label" DefaultValue="Group 2" />
-        <bt:String id="Button-01.Label" DefaultValue="PM Tool" />
+        <bt:String id="Button-01.Label" DefaultValue="Common" />
         <bt:String id="Button-02.Label" DefaultValue="Timesheet" />
         <bt:String id="Button-03.Label" DefaultValue="WBS" />
         <bt:String id="Button-04.Label" DefaultValue="Tool-C" />
